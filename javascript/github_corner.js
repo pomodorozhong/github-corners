@@ -3,8 +3,11 @@ function GithubCornerTopRight(
     backgroundColor = "#151513",
     foregroundColor = "#ffffff"
 ) {
+    let container = document.createElement("div");
+    document.body.appendChild(container);
+
     // Create a shadow root
-    let shadowRoot = document.body.attachShadow({ mode: "open" });
+    let shadowRoot = container.attachShadow({ mode: "open" });
 
     let wrapper = document.createElement("div");
     wrapper.innerHTML = `
