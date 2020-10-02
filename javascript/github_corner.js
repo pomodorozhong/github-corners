@@ -1,14 +1,13 @@
-class GithubCornerTopRight {
-    constructor(
-        url = "https://github.com/pomodorozhong/webcomponents-of-github-corners",
-        backgroundColor = "#151513",
-        foregroundColor = "#ffffff"
-    ) {
-        // Create a shadow root
-        let shadowRoot = document.body.attachShadow({ mode: "open" });
+function GithubCornerTopRight(
+    url = "https://github.com/pomodorozhong/webcomponents-of-github-corners",
+    backgroundColor = "#151513",
+    foregroundColor = "#ffffff"
+) {
+    // Create a shadow root
+    let shadowRoot = document.body.attachShadow({ mode: "open" });
 
-        let wrapper = document.createElement("div");
-        wrapper.innerHTML = `
+    let wrapper = document.createElement("div");
+    wrapper.innerHTML = `
         <div class="github-corner">
           <svg width="80" height="80" viewBox="0 0 250 250" style="fill:${backgroundColor}; color:${foregroundColor}; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
             <a href="${url}" style="pointer-events:auto">
@@ -22,46 +21,47 @@ class GithubCornerTopRight {
           </svg>
         </div>`;
 
-        // Create some CSS to apply to the shadow dom
-        let style = document.createElement("style");
-        style.textContent = `.github-corner:hover .octo-arm {
-          animation: octocat-wave 560ms ease-in-out
+    // Create some CSS to apply to the shadow dom
+    let style = document.createElement("style");
+    style.textContent = `
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
         }
         
         .github-corner {
-          pointer-events: none
+            pointer-events: none
         }
         
         @keyframes octocat-wave {
-          0%,
-          100% {
-            transform: rotate(0)
-          }
-          20%,
-          60% {
-            transform: rotate(-25deg)
-          }
-          40%,
-          80% {
-            transform: rotate(10deg)
-          }
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
         }
         
         @media (max-width:500px) {
-          .github-corner:hover .octo-arm {
-            animation: none
-          }
-          .github-corner .octo-arm {
-            animation: octocat-wave 560ms ease-in-out
-          }
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
         }
         `;
-        shadowRoot.appendChild(style);
-        shadowRoot.appendChild(wrapper);
-    }
+    shadowRoot.appendChild(style);
+    shadowRoot.appendChild(wrapper);
 }
+
 // white on black
-let githubCorner = new GithubCornerTopRight();
+GithubCornerTopRight();
 
 // black on white
-// let githubCorner = new GithubCornerTopRight("#", "#ffffff", "#000000");
+// GithubCornerTopRight("#", "#ffffff", "#000000");
