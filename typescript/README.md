@@ -1,6 +1,6 @@
-# TypeScript project template
+# Demo of github_corner.ts
 
-This folder contain a demo of the usage of [github_corner.ts](./src/ts/github_corner.ts).
+This folder contains a demo of the usage of [github_corner.ts](./src/ts/github_corner.ts).
 
 ## Installation
 
