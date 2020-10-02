@@ -63,7 +63,8 @@ function GithubCornerTopRight(
 }
 
 // white on black
-GithubCornerTopRight();
+let your_url = "https://github.com/pomodorozhong/github-corners";
+GithubCornerTopRight(your_url);
 
 // black on white
-// GithubCornerTopRight("#", "#ffffff", "#000000");
+// GithubCornerTopRight(your_url, "#ffffff", "#000000");
