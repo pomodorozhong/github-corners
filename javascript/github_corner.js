@@ -1,5 +1,5 @@
 function GithubCornerTopRight(
-    url = "https://github.com/pomodorozhong/webcomponents-of-github-corners",
+    url = "https://github.com/pomodorozhong/github-corners",
     backgroundColor = "#151513",
     foregroundColor = "#ffffff"
 ) {
